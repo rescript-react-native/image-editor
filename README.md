@@ -28,15 +28,19 @@ npm install @reason-react-native/image-editor
 Please refer to the relevant
 [instructions](https://github.com/react-native-community/react-native-image-editor/blob/master/README.md).
 
-Finally, `@reason-react-native/image-editor` should be added to
-`bs-dependencies` in `BuckleScript` configuration of the project
-(`bsconfig.json`). For example,
+`@reason-react-native/image-editor` should be added to `bs-dependencies` in your
+`bsconfig.json`. Something like
 
-```json
+```diff
 {
-  ...
-  "bs-dependencies": ["reason-react", "reason-react-native", "@reason-react-native/image-editor"],
-  ...
+  //...
+  "bs-dependencies": [
+    "reason-react",
+    "reason-react-native",
+    // ...
++    "@reason-react-native/image-editor"
+  ],
+  //...
 }
 ```
 
