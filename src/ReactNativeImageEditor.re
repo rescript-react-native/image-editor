@@ -19,7 +19,7 @@ external cropData:
     ~offset: offset,
     ~size: size,
     ~displaySize: size=?,
-    ~resizeMode: [@bs.string] [ | `contain | `cover | `stretch]=?,
+    ~resizeMode: [ | `contain | `cover | `stretch]=?,
     unit
   ) =>
   cropData;
