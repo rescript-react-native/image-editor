@@ -1,15 +1,15 @@
-# `@reason-react-native/image-editor`
+# `@rescript-react-native/image-editor`
 
-[![Build Status](https://github.com/reason-react-native/image-editor/workflows/Build/badge.svg)](https://github.com/reason-react-native/image-editor/actions)
-[![Version](https://img.shields.io/npm/v/@reason-react-native/image-editor.svg)](https://www.npmjs.com/@reason-react-native/image-editor)
-[![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reason-react-native.github.io/discord/)
+[![Build Status](https://github.com/rescript-react-native/image-editor/workflows/Build/badge.svg)](https://github.com/rescript-react-native/image-editor/actions)
+[![Version](https://img.shields.io/npm/v/@rescript-react-native/image-editor.svg)](https://www.npmjs.com/@rescript-react-native/image-editor)
+[![ReScript Forum](https://img.shields.io/discourse/posts?color=e6484f&label=ReScript%20Forum&server=https%3A%2F%2Fforum.rescript-lang.org)](https://forum.rescript-lang.org/)
 
-[ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
+[ReScript](https://rescript-lang.org) bindings for
 [`@react-native-community/image-editor`](https://github.com/react-native-image-editor/react-native-image-editor).
 
 Exposed as `ReactNativeImageEditor` module.
 
-`@reason-react-native/image-editor` X.y.\* means it's compatible with
+`@rescript-react-native/image-editor` X.y.\* means it's compatible with
 `@react-native-community/image-editor` X.y.\*
 
 ## Installation
@@ -20,22 +20,22 @@ is properly installed & configured by following their installation instructions,
 you can install the bindings:
 
 ```console
-npm install @reason-react-native/image-editor
+npm install @rescript-react-native/image-editor
 # or
-yarn add @reason-react-native/image-editor
+yarn add @rescript-react-native/image-editor
 ```
 
-`@reason-react-native/image-editor` should be added to `bs-dependencies` in your
+`@rescript-react-native/image-editor` should be added to `bs-dependencies` in your
 `bsconfig.json`:
 
 ```diff
 {
   //...
   "bs-dependencies": [
-    "reason-react",
-    "reason-react-native",
+    "@rescript/react",
+    "rescript-react-native",
     // ...
-+    "@reason-react-native/image-editor"
++    "@rescript-react-native/image-editor"
   ],
   //...
 }
@@ -50,7 +50,7 @@ successfully cropped, returns path of the resulting image as a `string`, wrapped
 in a Promise. If a remote image cannot be downloaded or an image cannot be
 cropped, the Promise will be rejected.
 
-```reason
+```rescript
 cropImage: (source, cropData) => Js.Promise.t(string)
 ```
 
@@ -58,7 +58,7 @@ cropImage: (source, cropData) => Js.Promise.t(string)
 
 To convert a `ReactNative.Packager.required` object into [`source`](#source).
 
-```reason
+```rescript
 fromRequired: ReactNative.Packager.required => source
 ```
 
@@ -66,7 +66,7 @@ fromRequired: ReactNative.Packager.required => source
 
 To convert a URI given as a `string` into [`source`](#source).
 
-```reason
+```rescript
 fromUriSource: string => source
 ```
 
@@ -82,7 +82,7 @@ An abstract type created using the [`fromRequired`](#fromrequired) and
 An abstract type created using the constructor of the same name which takes
 named arguments `x` and `y` of type `int`.
 
-```reason
+```rescript
 offset: (~x: int, ~y: int) => offset
 ```
 
@@ -91,7 +91,7 @@ offset: (~x: int, ~y: int) => offset
 An abstract type created using the constructor of the same name which takes
 named arguments `width` and `height` of type `int`.
 
-```reason
+```rescript
 size: (~width: int, ~height: int) => size
 ```
 
@@ -102,7 +102,7 @@ named arguments `offset` (of type `offset`) and `size` (of type `size`) and
 optional arguments `displaySize` (of type `size`) and `resizeMode` (one of
 polymorphic variants `` `contain ``, `` `cover ``, `` `stretch ``).
 
-```reason
+```rescript
 cropData: (
   ~offset: offset,
   ~size: size,
@@ -114,7 +114,7 @@ cropData: (
 
 ## Example
 
-```reason
+```rescript
 open ReactNative;
 
 // hardcoding actual image dimensions
@@ -262,11 +262,11 @@ releases.
 ## Contribute
 
 Read the
-[contribution guidelines](https://github.com/reason-react-native/.github/blob/master/CONTRIBUTING.md)
+[contribution guidelines](https://github.com/rescript-react-native/.github/blob/master/CONTRIBUTING.md)
 before contributing.
 
 ## Code of Conduct
 
 We want this community to be friendly and respectful to each other. Please read
-[our full code of conduct](https://github.com/reason-react-native/.github/blob/master/CODE_OF_CONDUCT.md)
+[our full code of conduct](https://github.com/rescript-react-native/.github/blob/master/CODE_OF_CONDUCT.md)
 so that you can understand what actions will and will not be tolerated.

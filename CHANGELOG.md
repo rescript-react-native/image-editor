@@ -1,4 +1,4 @@
-# Changelog of `@reason-react-native/image-editor`
+# Changelog of `@rescript-react-native/image-editor`
 
 ## 2.3.2 - 2020-11-17
 
