@@ -1,5 +1,9 @@
 # Changelog of `@rescript-react-native/image-editor`
 
+## 2.3.3 - 2021-05-03
+
+ReScript
+
 ## 2.3.2 - 2020-11-17
 
 Fix npm description
